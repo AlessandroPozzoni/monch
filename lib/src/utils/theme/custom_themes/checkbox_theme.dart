@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomCheckboxThemeData {
-  CustomCheckboxThemeData._();
+class MonchCheckboxThemeData {
+  MonchCheckboxThemeData._();
 
   static CheckboxThemeData lightCheckboxThemeData = CheckboxThemeData(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),

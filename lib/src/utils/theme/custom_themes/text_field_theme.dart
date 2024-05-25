@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomTextFieldTheme {
-  CustomTextFieldTheme._();
+class MonchTextFieldTheme {
+  MonchTextFieldTheme._();
 
   static InputDecorationTheme lightInputDecoratorTheme = InputDecorationTheme(
     errorMaxLines: 3,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomBottomSheetThemeData {
-  CustomBottomSheetThemeData._();
+class MonchBottomSheetThemeData {
+  MonchBottomSheetThemeData._();
 
   static BottomSheetThemeData lightBottomSheetThemeData = BottomSheetThemeData(
     showDragHandle: false,

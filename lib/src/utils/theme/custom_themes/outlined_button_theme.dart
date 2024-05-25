@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomOutlineButtonThemeData {
-  CustomOutlineButtonThemeData._();
+class MonchOutlineButtonThemeData {
+  MonchOutlineButtonThemeData._();
 
   static OutlinedButtonThemeData lightOutlinedThemeData = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(

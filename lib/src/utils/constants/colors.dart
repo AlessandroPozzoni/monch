@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomColors {
-  CustomColors._();
+class MonchColors {
+  MonchColors._();
 
   // App basic colors
   static const Color primary = Color(0xFFFFFFFF);

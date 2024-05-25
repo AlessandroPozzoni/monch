@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomElevatedButtonThemeData {
-  CustomElevatedButtonThemeData._();
+class MonchElevatedButtonThemeData {
+  MonchElevatedButtonThemeData._();
 
   static ElevatedButtonThemeData lightElevatedButtonThemeData = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(

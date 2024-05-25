@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomChipThemeData {
-  CustomChipThemeData._();
+class MonchChipThemeData {
+  MonchChipThemeData._();
 
   static ChipThemeData lightChipThemeData = ChipThemeData(
     disabledColor: Colors.grey.withOpacity(0.4),
