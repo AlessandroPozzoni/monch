@@ -10,14 +10,13 @@ class OnBoardingController extends GetxController {
 
   // Update Current Index when Page Scroll
   void updatePageIndicator(index) {
-    currentPageIndex = index;
-
+    currentPageIndex.value = index;
   }
 
   // Jump to the specific dot selected page
   void dotNavigationClick(index) {
     currentPageIndex.value = index;
-    pageController.jumpTo(index);
+    pageController.animateToPage(index, curve: Curves.fastOutSlowIn, duration: const Duration(milliseconds: 500));
   }
 
   // Update Current Index and jump to next page
@@ -26,13 +25,13 @@ class OnBoardingController extends GetxController {
       // Get.to(LoginScreen);
     } else {
       int page = currentPageIndex.value + 1;
-      pageController.jumpToPage(page);
+      pageController.animateToPage(page, curve: Curves.fastOutSlowIn, duration: const Duration(milliseconds: 500));
     }
   }
 
   // Update Curret Index and jump to the last page
   void skipPages() {
     currentPageIndex.value = 2;
-    pageController.jumpToPage(2);
+      pageController.animateToPage(2, curve: Curves.fastOutSlowIn, duration: const Duration(milliseconds: 500));
   }
 }
