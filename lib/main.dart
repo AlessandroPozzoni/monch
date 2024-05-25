@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monch/src/utils/theme/theme.dart';
 
 void main() {
   runApp(const App());
@@ -9,6 +10,10 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp();
+    return MaterialApp(
+      themeMode: ThemeMode.system,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+    );
   }
 }
