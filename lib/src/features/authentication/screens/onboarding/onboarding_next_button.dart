@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:iconsax/iconsax.dart';
+import 'package:monch/src/features/authentication/controllers/onboarding/onboarding.controller.dart';
 import 'package:monch/src/utils/constants/colors.dart';import 'package:monch/src/utils/constants/sizes.dart';
 import 'package:monch/src/utils/device/device_utility.dart';class OnBoardingNextButton extends StatelessWidget {
   const OnBoardingNextButton({
@@ -13,7 +14,7 @@ import 'package:monch/src/utils/device/device_utility.dart';class OnBoardingNext
         right: MonchSizes.defaultSpace,
         bottom: MonchDeviceUtils.getBottomNavigationBarHeight(),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () => OnBoardingController.instance.nextPage(),
           style: ElevatedButton.styleFrom(shape: const CircleBorder(), backgroundColor: MonchColors.primary),
           child: const Icon(Iconsax.arrow_right_3),
         ));

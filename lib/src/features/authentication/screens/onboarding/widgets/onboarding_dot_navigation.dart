@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monch/src/features/authentication/controllers/onboarding/onboarding.controller.dart';
 import 'package:monch/src/utils/constants/colors.dart';
 import 'package:monch/src/utils/constants/sizes.dart';
 import 'package:monch/src/utils/device/device_utility.dart';
@@ -12,15 +13,17 @@ class OnBoardingDotNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = OnBoardingController.instance;
     final dark = MonchHelperFunctions.isDarkMode(context);
 
     return Positioned(
         bottom: MonchDeviceUtils.getBottomNavigationBarHeight() + 25,
         left: MonchSizes.defaultSpace,
         child: SmoothPageIndicator(
+          controller: controller.pageController,
+          onDotClicked: controller.dotNavigationClick,
           effect: ExpandingDotsEffect(
               activeDotColor: dark ? MonchColors.light : MonchColors.dark, dotHeight: 6),
-          controller: PageController(),
           count: 3,
         ));
   }
