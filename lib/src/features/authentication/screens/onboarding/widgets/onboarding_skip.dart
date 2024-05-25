@@ -14,6 +14,10 @@ class OnBoardingSkip extends StatelessWidget {
         top: MonchDeviceUtils.getAppBarHeight(),
         right: MonchSizes.defaultSpace,
         child: TextButton(
-            onPressed: () => OnBoardingController.instance.skipPages(), child: const Text('Too hungry? Skip')));
+            onPressed: () => OnBoardingController.instance.skipPages(),
+            child: Text(
+              'Too hungry? Skip',
+              style: Theme.of(context).textTheme.titleSmall,
+            )));
   }
 }
