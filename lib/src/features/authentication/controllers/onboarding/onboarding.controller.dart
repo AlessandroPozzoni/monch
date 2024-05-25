@@ -24,8 +24,8 @@ class OnBoardingController extends GetxController {
     if (currentPageIndex.value == 2) {
       // Get.to(LoginScreen);
     } else {
-      int page = currentPageIndex.value + 1;
-      pageController.animateToPage(page, curve: Curves.fastOutSlowIn, duration: const Duration(milliseconds: 500));
+      currentPageIndex.value = currentPageIndex.value + 1;
+      pageController.animateToPage(currentPageIndex.value, curve: Curves.fastOutSlowIn, duration: const Duration(milliseconds: 500));
     }
   }
 
