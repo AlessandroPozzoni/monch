@@ -32,7 +32,7 @@ class MonchSizes {
   static const double imageThumbSize = 80.0;
 
   // Default spacing between sections
-  static const double defualtSpace = 24.0;
+  static const double defaultSpace = 24.0;
   static const double spaceBwItems = 16.0;
   static const double spaceBwSections = 32.0;
 

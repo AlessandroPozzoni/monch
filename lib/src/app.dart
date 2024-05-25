@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:get/get.dart';
+import 'package:monch/src/features/authentication/screens/onboarding/onboarding.dart';
 
 import 'package:monch/src/utils/theme/theme.dart';
 
@@ -27,12 +29,12 @@ class MyApp extends StatelessWidget {
     return ListenableBuilder(
       listenable: settingsController,
       builder: (BuildContext context, Widget? child) {
-        return MaterialApp(
+        return GetMaterialApp(
           // Providing a restorationScopeId allows the Navigator built by the
           // MaterialApp to restore the navigation stack when a user leaves and
           // returns to the app after it has been killed while running in the
           // background.
-          restorationScopeId: 'app',
+          // restorationScopeId: 'app',
 
           // Provide the generated AppLocalizations to the MaterialApp. This
           // allows descendant Widgets to display the correct translations
@@ -61,6 +63,7 @@ class MyApp extends StatelessWidget {
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: settingsController.themeMode,
+          home: const OnBoardingScreen(),
 
           // Define a function to handle named routes in order to support
           // Flutter web url navigation and deep linking.
