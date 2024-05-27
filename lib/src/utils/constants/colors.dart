@@ -10,7 +10,7 @@ class MonchColors {
 
   // Text colors
   static const Color textPrimary = Color(0xFF272727);
-  static const Color textSecondary = Color(0xFF303030);
+  static const Color textSecondary = Color(0xFFEB9947);
   static const Color textWhite = Color(0xFFFFFFFF);
 
   // Background colors
