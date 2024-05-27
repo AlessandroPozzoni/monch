@@ -23,7 +23,7 @@ class OnBoardingDotNavigation extends StatelessWidget {
           controller: controller.pageController,
           onDotClicked: controller.dotNavigationClick,
           effect: ExpandingDotsEffect(
-              activeDotColor: dark ? MonchColors.accent : MonchColors.primary, dotHeight: 6),
+              activeDotColor: dark ? MonchColors.secondary : MonchColors.primary, dotHeight: 5),
           count: 3,
         ));
   }
