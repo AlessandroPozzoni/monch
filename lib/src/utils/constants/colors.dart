@@ -5,8 +5,8 @@ class MonchColors {
 
   // App basic colors
   static const Color primary = Color(0xFF553311);
-  static const Color secondary = Color(0xFFEECC77);
-  static const Color accent = Color(0xFFEB9947);
+  static const Color secondary = Color(0xFFEB9947);
+  static const Color accent = Color(0xFFEECC77);
 
   // Text colors
   static const Color textPrimary = Color(0xFF272727);
@@ -19,12 +19,12 @@ class MonchColors {
   static const Color primaryBackground = Color(0xFFECECEC);
 
   // Background Container colors
-  static const Color lightContainer = Color(0xFFFFFFFF);
-  static const Color darkContainer = Color(0xFFFFFFFF);
+  static const Color lightContainer = Color(0xFFECECEC);
+  static const Color darkContainer = Color(0xFF272727);
 
   // Button colors
-  static const Color buttonPrimary = Color(0xFFEB9947);
-  static const Color buttonSecondary = Color(0xFF553311);
+  static const Color buttonPrimary = Color(0xFF553311);
+  static const Color buttonSecondary = Color(0xFFEB9947);
   static const Color buttonDisabled = Color(0xFFEECC77);
 
   // Border colors
