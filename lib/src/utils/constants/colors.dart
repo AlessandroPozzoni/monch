@@ -6,32 +6,32 @@ class MonchColors {
   // TODO: fix colors
 
   // App basic colors
-  static const Color primary = Color(0xFFFFFFFF);
-  static const Color secondary = Color(0xFFFFFFFF);
-  static const Color accent = Color(0xFFFFFFFF);
+  static const Color primary = Color(0xFF553311);
+  static const Color secondary = Color(0xFFEECC77);
+  static const Color accent = Color(0xFFEB9947);
 
   // Text colors
-  static const Color textPrimary = Color(0xFFFFFFFF);
-  static const Color textSecondary = Color(0xFFFFFFFF);
+  static const Color textPrimary = Color(0xFF272727);
+  static const Color textSecondary = Color(0xFF303030);
   static const Color textWhite = Color(0xFFFFFFFF);
 
   // Background colors
-  static const Color light = Color(0xFFFFFFFF);
-  static const Color dark = Color(0xFFFFFFFF);
-  static const Color primaryBackground = Color(0xFFFFFFFF);
+  static const Color light = Color(0xFFECECEC);
+  static const Color dark = Color(0xFF272727);
+  static const Color primaryBackground = Color(0xFFECECEC);
 
   // Background Container colors
   static const Color lightContainer = Color(0xFFFFFFFF);
   static const Color darkContainer = Color(0xFFFFFFFF);
 
   // Button colors
-  static const Color buttonPrimary = Color(0xFFFFFFFF);
-  static const Color buttonSecondary = Color(0xFFFFFFFF);
-  static const Color buttonDisabled = Color(0xFFFFFFFF);
+  static const Color buttonPrimary = Color(0xFFEB9947);
+  static const Color buttonSecondary = Color(0xFF553311);
+  static const Color buttonDisabled = Color(0xFFEECC77);
 
   // Border colors
-  static const Color borderPrimary = Color(0xFFFFFFFF);
-  static const Color borderSecondary = Color(0xFFFFFFFF);
+  static const Color borderPrimary = Color(0xFF553311);
+  static const Color borderSecondary = Color(0xFFEECC77);
 
   // Error and Validation colors
   static const Color error = Color(0xFFD32F2F);
