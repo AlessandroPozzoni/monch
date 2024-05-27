@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monch/src/utils/constants/colors.dart';
 
 class MonchCheckboxThemeData {
   MonchCheckboxThemeData._();
@@ -7,14 +8,14 @@ class MonchCheckboxThemeData {
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
     checkColor: WidgetStateProperty.resolveWith((states) {
       if(states.contains(WidgetState.selected)) {
-        return Colors.white;
+        return MonchColors.white;
       } else {
-        return Colors.black;
+        return MonchColors.black;
       }
     }),
     fillColor: WidgetStateProperty.resolveWith((states) {
       if(states.contains(WidgetState.selected)) {
-        return Colors.brown;
+        return MonchColors.primary;
       } else {
         return Colors.transparent;
       }
@@ -25,14 +26,14 @@ class MonchCheckboxThemeData {
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
     checkColor: WidgetStateProperty.resolveWith((states) {
       if(states.contains(WidgetState.selected)) {
-        return Colors.white;
+        return MonchColors.white;
       } else {
-        return Colors.black;
+        return MonchColors.black;
       }
     }),
     fillColor: WidgetStateProperty.resolveWith((states) {
       if(states.contains(WidgetState.selected)) {
-        return Colors.brown;
+        return MonchColors.secondary;
       } else {
         return Colors.transparent;
       }

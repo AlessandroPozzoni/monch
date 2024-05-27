@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monch/src/utils/constants/colors.dart';
 
 import 'package:monch/src/utils/theme/custom_themes/appbar_theme.dart';
 import 'package:monch/src/utils/theme/custom_themes/bottom_sheet_theme.dart';
@@ -16,8 +17,8 @@ class AppTheme {
     useMaterial3: true,
     fontFamily: 'Poppins',
     brightness: Brightness.light,
-    primaryColor: Colors.brown,
-    scaffoldBackgroundColor: Colors.white,
+    primaryColor: MonchColors.secondary,
+    scaffoldBackgroundColor: MonchColors.light,
     appBarTheme: MonchAppBarTheme.lightAppBarTheme,
     bottomSheetTheme: MonchBottomSheetThemeData.lightBottomSheetThemeData,
     checkboxTheme: MonchCheckboxThemeData.lightCheckboxThemeData,
@@ -31,8 +32,8 @@ class AppTheme {
     useMaterial3: true,
     fontFamily: 'Poppins',
     brightness: Brightness.dark,
-    primaryColor: Colors.brown,
-    scaffoldBackgroundColor: Colors.black,
+    primaryColor: MonchColors.primary,
+    scaffoldBackgroundColor: MonchColors.dark,
     appBarTheme: MonchAppBarTheme.darkAppBarTheme,
     bottomSheetTheme: MonchBottomSheetThemeData.darkBottomSheetThemeData,
     checkboxTheme: MonchCheckboxThemeData.darkCheckboxThemeData,
