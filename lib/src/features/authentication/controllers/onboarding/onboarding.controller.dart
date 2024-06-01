@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:monch/src/features/authentication/screens/login/login.dart';
 
 class OnBoardingController extends GetxController {
   static OnBoardingController get instance => Get.find();
@@ -22,7 +23,7 @@ class OnBoardingController extends GetxController {
   // Update Current Index and jump to next page
   void nextPage() {
     if (currentPageIndex.value == 2) {
-      // Get.to(LoginScreen);
+      Get.offAll(const LoginScreen());
     } else {
       currentPageIndex.value = currentPageIndex.value + 1;
       pageController.animateToPage(currentPageIndex.value, curve: Curves.fastOutSlowIn, duration: const Duration(milliseconds: 500));
