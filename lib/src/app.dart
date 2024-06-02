@@ -3,6 +3,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:monch/src/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:monch/src/utils/constants/colors.dart';
 
 import 'package:monch/src/utils/theme/theme.dart';
 
@@ -63,7 +64,7 @@ class MyApp extends StatelessWidget {
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: settingsController.themeMode,
-          home: const OnBoardingScreen(),
+          home: const Scaffold(backgroundColor: MonchColors.primary, body: Center(child: CircularProgressIndicator(color: MonchColors.white,),),),
 
           // Define a function to handle named routes in order to support
           // Flutter web url navigation and deep linking.

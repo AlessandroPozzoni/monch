@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:monch/src/features/authentication/screens/login/login.dart';
 
 class OnBoardingController extends GetxController {
@@ -23,6 +24,9 @@ class OnBoardingController extends GetxController {
   // Update Current Index and jump to next page
   void nextPage() {
     if (currentPageIndex.value == 2) {
+      // TODO remove comments to activate single time onboarding
+      // final storage = GetStorage();
+      // storage.write('firstLoad', false);
       Get.offAll(const LoginScreen());
     } else {
       currentPageIndex.value = currentPageIndex.value + 1;

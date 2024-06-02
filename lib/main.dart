@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:monch/src/data/repositories/authentication/authentication_repository.dart';
 import 'src/app.dart';
 import 'src/settings/settings_controller.dart';
 import 'src/settings/settings_service.dart';
@@ -15,15 +19,21 @@ void main() async {
   // This prevents a sudden theme change when the app is first displayed.
   await settingsController.loadSettings();
 
-  // TODO Add widget bindings
-  // TODO Init local storage
+  // Widget bindings
+  final WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized(); 
+
+  // Init local storage
+  await GetStorage.init();
+
   // TODO Init payment methods
+
   // TODO Await native splash
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   // Initialize firebase
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
-  ); //.then((FirebaseApp value) => Get.put(AuthenticationRepository()));
+  ).then((FirebaseApp value) => Get.put(AuthenticationRepository()));
 
   // TODO Initialize authentication
 
