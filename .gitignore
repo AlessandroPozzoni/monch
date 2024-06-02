@@ -46,4 +46,5 @@ app.*.map.json
 /lib/src/features/template
 /lib/src/features/sample_feature
 token.txt
+/lib/firebase_options.dart
 
