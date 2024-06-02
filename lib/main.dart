@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'src/app.dart';
 import 'src/settings/settings_controller.dart';
 import 'src/settings/settings_service.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
 
 void main() async {
   // Set up the SettingsController, which will glue user settings to multiple
@@ -11,6 +14,18 @@ void main() async {
   // Load the user's preferred theme while the splash screen is displayed.
   // This prevents a sudden theme change when the app is first displayed.
   await settingsController.loadSettings();
+
+  // TODO Add widget bindings
+  // TODO Init local storage
+  // TODO Init payment methods
+  // TODO Await native splash
+
+  // Initialize firebase
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  ); //.then((FirebaseApp value) => Get.put(AuthenticationRepository()));
+
+  // TODO Initialize authentication
 
 
 
