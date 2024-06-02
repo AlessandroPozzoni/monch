@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "300345626968",
+    "project_id": "monch-lifestasty",
+    "storage_bucket": "monch-lifestasty.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300345626968:android:735e2c39b0e297e06d152d",
+        "android_client_info": {
+          "package_name": "com.monch.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300345626968-i8rsei8qmq92d7amrgi7gg45bkvs87is.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.monch.app",
+            "certificate_hash": "cdf334fb0e32aaf6b42f4fe9328ade940406a119"
+          }
+        },
+        {
+          "client_id": "300345626968-ol7a7f906pif29d3be5lrulp2t91tdr2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqMJGCuJCNd99OGloAmUjM2g68qLYh3l4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "300345626968-ol7a7f906pif29d3be5lrulp2t91tdr2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "300345626968-p0kvg4foak2gt5a3d5v65e3ho6oplssb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.monch"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
