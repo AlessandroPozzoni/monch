@@ -39,7 +39,11 @@ class MonchTexts {
   // Authentication heading texts
   static const String loginTitle = "Welcome back!";
   static const String loginSubtitle = "Ready to monch on some delicacies?";
+  static const String signupTitle = "Sign up";
+  static const String signupSubtitle = "Let's get you started";
   static const String signUpTitle = "Let's create your account";
+  static const String iAgreeTo = "I agree to";
+  static const String and = "and";
   static const String forgotPasswordTitle = "Forgot password?";
   static const String forgotPasswordSubtitle = "Let's make sure you get it back asap!";
   static const String changeYourPasswordTitle = "Password reset e-mail sent";

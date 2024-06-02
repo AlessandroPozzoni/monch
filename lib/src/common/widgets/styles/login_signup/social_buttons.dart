@@ -10,11 +10,21 @@ class MonchSocialButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-      Container(
-        decoration: BoxDecoration(border: Border.all(color: MonchColors.grey), borderRadius: BorderRadius.circular(100)),
-        child: IconButton(onPressed: () {}, icon: const Image(width: MonchSizes.iconM, height: MonchSizes.iconM,image: AssetImage(MonchImages.googleLogo))),
-      )
-    ],);
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          decoration: BoxDecoration(
+              border: Border.all(color: MonchColors.grey),
+              borderRadius: BorderRadius.circular(100)),
+          child: IconButton(
+              onPressed: () {},
+              icon: const Image(
+                  width: MonchSizes.iconM,
+                  height: MonchSizes.iconM,
+                  image: AssetImage(MonchImages.googleLogo))),
+        )
+      ],
+    );
   }
 }

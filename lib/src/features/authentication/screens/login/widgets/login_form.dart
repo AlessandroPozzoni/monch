@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:monch/src/features/authentication/screens/signup/signup.dart';
 import 'package:monch/src/utils/constants/sizes.dart';
 import 'package:monch/src/utils/constants/texts_strings.dart';
 
@@ -67,7 +69,7 @@ class MonchLoginForm extends StatelessWidget {
           SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => const SignupScreen()),
                   child: const Text(MonchTexts.createAccount))),
           // const SizedBox(height: MonchSizes.spaceBwSections),
         ],
