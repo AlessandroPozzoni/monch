@@ -39,10 +39,10 @@
               "client_type": 3
             },
             {
-              "client_id": "300345626968-p0kvg4foak2gt5a3d5v65e3ho6oplssb.apps.googleusercontent.com",
+              "client_id": "300345626968-gha7brnojp3cl5cmshsnu69gia31k1ve.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.monch"
+                "bundle_id": "com.monch.app"
               }
             }
           ]
