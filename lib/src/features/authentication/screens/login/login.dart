@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:monch/src/common/widgets/styles/login_signup/form_divider.dart';
+import 'package:monch/src/common/widgets/styles/login_signup/social_buttons.dart';
 import 'package:monch/src/common/widgets/styles/spacing_styles.dart';
 import 'package:monch/src/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:monch/src/features/authentication/screens/login/widgets/login_header.dart';
@@ -26,21 +28,17 @@ class LoginScreen extends StatelessWidget {
             children: [
               // Logo, title and subtitle
               MonchLoginHeader(),
+              
               // Form
               MonchLoginForm(),
               
               // Divider
               MonchFormDivider(dividerText: MonchTexts.orSignInWith),
 
-              const SizedBox(height: MonchSizes.spaceBwSections,)
+              SizedBox(height: MonchSizes.spaceBwSections,),
 
               // Footer
-              // TODO sign in with Google UI
-
-
-
-
-
+              MonchSocialButtons()
 
             ],
           ),
