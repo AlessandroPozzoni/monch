@@ -1,4 +1,4 @@
-package com.example.monch
+package com.monch.app
 
 import io.flutter.embedding.android.FlutterActivity
 
