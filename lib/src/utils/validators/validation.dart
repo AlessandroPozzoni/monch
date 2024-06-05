@@ -27,20 +27,8 @@ class MonchValidator {
       return 'Password is required.';
     }
 
-    if(value.length < 6) {
-      return 'Password must be at least 6 characters long.';
-    }
-
-    if(!value.contains(RegExp(r'[A-Z]'))) {
-      return 'Password must contain at least one uppercase letter.';
-    }
-
-    if(!value.contains(RegExp(r'[0-9]'))) {
-      return 'Password must contain at least one number.';
-    }
-
-    if(!value.contains(RegExp(r'[!@#$%^&*(),.?":{}|<>]'))) {
-      return 'Password must contain at least one special character.';
+    if(value.length < 6 || !value.contains(RegExp(r'[A-Z]')) || !value.contains(RegExp(r'[0-9]')) || !value.contains(RegExp(r'[!@#$%^&*(),.?":{}|<>]'))) {
+      return 'Password must be at least 6 characters long, with at least one uppercase letter, one number and one special character.';
     }
 
     return null;
