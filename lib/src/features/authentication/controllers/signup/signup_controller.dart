@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:monch/src/common/widgets/styles/loaders/loaders.dart';
 import 'package:monch/src/data/repositories/authentication/authentication_repository.dart';
 import 'package:monch/src/data/repositories/user/user_repository.dart';
+import 'package:monch/src/features/authentication/screens/signup/verify_email.dart';
 import 'package:monch/src/features/personalization/models/user_model.dart';
 import 'package:monch/src/utils/constants/image_strings.dart';
 import 'package:monch/src/utils/popups/full_screen_loader.dart';
@@ -76,6 +77,8 @@ class SignupController extends GetxController {
 
       // Show success message
       MonchLoaders.successSnackBar(title: 'Account created!', message: 'Your account has been successfully created! Verify your e-mail to continue.');
+
+      Get.to(() => const VerifyEmailScreen());
 
       // TODO Move to verify email screen
 

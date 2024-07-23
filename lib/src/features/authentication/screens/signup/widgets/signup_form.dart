@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:monch/src/features/authentication/controllers/signup/signup_controller.dart';
-import 'package:monch/src/features/authentication/screens/signup/verify_email.dart';
 import 'package:monch/src/features/authentication/screens/signup/widgets/signup_terms_and_condtions.dart';
 import 'package:monch/src/utils/constants/colors.dart';
 import 'package:monch/src/utils/constants/sizes.dart';
@@ -105,9 +104,7 @@ class MonchSignupForm extends StatelessWidget {
                   suffixIcon: IconButton(
                       onPressed: () => controller.hidePassword.value =
                           !controller.hidePassword.value,
-                      icon: Icon(controller.hidePassword.value
-                          ? Iconsax.eye_slash
-                          : Iconsax.eye)),
+                      icon: Icon(controller.hidePassword.value ? Iconsax.eye_slash : Iconsax.eye)),
                 ),
               ),
             ),
@@ -126,8 +123,7 @@ class MonchSignupForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () => Get.to(
-                    () => const VerifyEmailScreen()), // controller.signup(),
+                onPressed: () => controller.signup(),
                 child: const Text(MonchTexts.createAccount),
               ),
             ),
