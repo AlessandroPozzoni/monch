@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:monch/src/common/widgets/styles/login_signup/form_divider.dart';
-import 'package:monch/src/common/widgets/styles/login_signup/social_buttons.dart';
+import 'package:monch/src/common/widgets/login_signup/form_divider.dart';
+import 'package:monch/src/common/widgets/login_signup/social_buttons.dart';
 import 'package:monch/src/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:monch/src/utils/constants/colors.dart';
 import 'package:monch/src/utils/constants/sizes.dart';
