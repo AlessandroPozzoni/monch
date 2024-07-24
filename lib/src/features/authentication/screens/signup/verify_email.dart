@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:monch/src/common/widgets/success_screen/success_screen.dart';
+import 'package:monch/src/data/repositories/authentication/authentication_repository.dart';
+import 'package:monch/src/features/authentication/controllers/signup/verify_email_controller.dart';
 import 'package:monch/src/features/authentication/screens/login/login.dart';
 import 'package:monch/src/utils/constants/image_strings.dart';
 import 'package:monch/src/utils/constants/sizes.dart';
@@ -9,16 +11,20 @@ import 'package:monch/src/utils/helpers/helper_functions.dart';
 import 'package:monch/src/utils/constants/texts_strings.dart';
 
 class VerifyEmailScreen extends StatelessWidget {
-  const VerifyEmailScreen({super.key});
+  const VerifyEmailScreen({super.key, this.email});
+
+  final String? email;
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(VerifyEmailController());
+
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-              onPressed: () => Get.offAll(() => const LoginScreen()),
+              onPressed: () => AuthenticationRepository.instance.logout(),
               icon: const Icon(Iconsax.close_square))
         ],
       ),
@@ -45,7 +51,7 @@ class VerifyEmailScreen extends StatelessWidget {
                 height: MonchSizes.spaceBwSections,
               ),
               Text(
-                'todo@user.com',
+                email ?? '',
                 style: Theme.of(context).textTheme.labelLarge,
                 textAlign: TextAlign.center,
               ),
@@ -65,12 +71,7 @@ class VerifyEmailScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Get.to(() => SuccessScreen(
-                    image: MonchImages.flutterLogo,
-                    title: MonchTexts.accountCreatedTitle,
-                    subtitle: MonchTexts.accountCreatedSubtitle,
-                    onPressed: () => Get.to(() => const LoginScreen()),
-                  )),
+                  onPressed: () => controller.checkEmailVerification(),
                   child: const Text('continue'),
                 ),
               ),
@@ -80,7 +81,7 @@ class VerifyEmailScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () =>controller.sendEmailVerification(),
                   child: const Text('Resend email'),
                 ),
               ),

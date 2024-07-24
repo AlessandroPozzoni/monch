@@ -78,7 +78,8 @@ class SignupController extends GetxController {
       // Show success message
       MonchLoaders.successSnackBar(title: 'Account created!', message: 'Your account has been successfully created! Verify your e-mail to continue.');
 
-      Get.to(() => const VerifyEmailScreen());
+      sendEmailVerification();
+      Get.to(() => VerifyEmailScreen(email: email.text.trim()));
 
       // TODO Move to verify email screen
 
@@ -89,6 +90,17 @@ class SignupController extends GetxController {
       // Show some generic error to the user
       MonchLoaders.errorSnackBar(title: 'Oh snap!', message: e.toString());
     } finally {
+    }
+  }
+
+  sendEmailVerification() async {
+    try {
+      await AuthenticationRepository.instance.sendEmailVerification();
+      MonchLoaders.successSnackBar(
+          title: 'Email sent',
+          message: 'Please check your inbox and verify your email address.');
+    } catch (e) {
+      MonchLoaders.errorSnackBar(title: 'Oh snap!', message: e.toString());
     }
   }
 
