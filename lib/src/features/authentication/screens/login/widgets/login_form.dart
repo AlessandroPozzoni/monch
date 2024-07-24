@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:monch/src/features/authentication/screens/password_configuration/forgot_password.dart';
 import 'package:monch/src/features/authentication/screens/signup/signup.dart';
 import 'package:monch/src/utils/constants/sizes.dart';
 import 'package:monch/src/utils/constants/texts_strings.dart';
@@ -51,7 +52,7 @@ class MonchLoginForm extends StatelessWidget {
     
               // Forgot password
               TextButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => const ForgotPassword()),
                   child: const Text(MonchTexts.forgotPassword)),
             ],
           ),
