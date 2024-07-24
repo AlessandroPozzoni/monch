@@ -11,7 +11,7 @@ class MonchLoaders {
   static customToast({required message}) {
     ScaffoldMessenger.of(Get.context!).showSnackBar(SnackBar(
       elevation: 0,
-      duration: const Duration(seconds: 3),
+      duration: const Duration(seconds: 6),
       backgroundColor: Colors.transparent,
       content: Container(
         padding: const EdgeInsets.all(12.0),
@@ -39,7 +39,10 @@ class MonchLoaders {
         colorText: MonchColors.white,
         backgroundColor: MonchColors.primary,
         snackPosition: SnackPosition.BOTTOM,
+        animationDuration: const Duration(milliseconds: 750),
         duration: Duration(seconds: duration),
+        forwardAnimationCurve: Curves.easeInQuint,
+        reverseAnimationCurve: Curves.easeOutQuint,
         margin: const EdgeInsets.all(10),
         icon: const Icon(
           Iconsax.check,
@@ -54,7 +57,10 @@ class MonchLoaders {
         colorText: MonchColors.white,
         backgroundColor: MonchColors.warning,
         snackPosition: SnackPosition.BOTTOM,
+        animationDuration: const Duration(milliseconds: 750),
         duration: Duration(seconds: duration),
+        forwardAnimationCurve: Curves.easeInQuint,
+        reverseAnimationCurve: Curves.easeOutQuint,
         margin: const EdgeInsets.all(20),
         icon: const Icon(
           Iconsax.warning_2,
@@ -69,7 +75,10 @@ class MonchLoaders {
         colorText: MonchColors.white,
         backgroundColor: MonchColors.error,
         snackPosition: SnackPosition.BOTTOM,
+        animationDuration: const Duration(milliseconds: 750),
         duration: Duration(seconds: duration),
+        forwardAnimationCurve: Curves.easeInQuint,
+        reverseAnimationCurve: Curves.easeOutQuint,
         margin: const EdgeInsets.all(20),
         icon: const Icon(
           Iconsax.warning_2,
