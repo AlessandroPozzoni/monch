@@ -79,9 +79,9 @@ class SignupController extends GetxController {
       MonchLoaders.successSnackBar(title: 'Account created!', message: 'Your account has been successfully created! Verify your e-mail to continue.');
 
       sendEmailVerification();
-      Get.to(() => VerifyEmailScreen(email: email.text.trim()));
 
       // TODO Move to verify email screen
+      Get.to(() => VerifyEmailScreen(email: email.text.trim()));
 
     } catch(e) {
       // Remove loader

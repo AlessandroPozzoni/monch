@@ -35,7 +35,7 @@ class VerifyEmailController extends GetxController {
     Timer.periodic(const Duration(seconds: 1), (timer) async {
       await FirebaseAuth.instance.currentUser?.reload();
       final user = FirebaseAuth.instance.currentUser;
-      if (user?.emailVerified ?? false) {
+      if (user?.emailVerified ?? true) { // TODO revert back to false
         timer.cancel();
         Get.off(
           () => SuccessScreen(
@@ -52,7 +52,7 @@ class VerifyEmailController extends GetxController {
   // Manually check if email is verified
   checkEmailVerification() async {
     final currentUser = FirebaseAuth.instance.currentUser;
-    if (currentUser != null && currentUser.emailVerified) {
+    if (currentUser != null && currentUser.emailVerified || true) { // TODO remove true
       Get.off(() => SuccessScreen(
             image: MonchImages.flutterLogo,
             title: MonchTexts.accountCreatedTitle,
