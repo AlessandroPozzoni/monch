@@ -1,10 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:monch/src/common/widgets/mockhome/mock_home.dart';
 import 'package:monch/src/features/authentication/screens/login/login.dart';
 import 'package:monch/src/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:monch/src/features/authentication/screens/signup/verify_email.dart';
+import 'package:monch/src/utils/constants/image_strings.dart';
 
 class AuthenticationRepository extends GetxController {
   static AuthenticationRepository get instance => Get.find();
@@ -23,8 +26,8 @@ class AuthenticationRepository extends GetxController {
   screenRedirect() async {
     final user = _auth.currentUser;
     if (user != null) {
-      if (user.emailVerified) {
-        // Get.offAll(() => const Home());
+      if (user.emailVerified || true) { // TODO remove true
+        Get.offAll(() => const MockScreen(image: MonchImages.flutterLogo, title: 'Mock screen'),);
       } else {
         Get.offAll(() => VerifyEmailScreen(email: _auth.currentUser?.email,));
       }
