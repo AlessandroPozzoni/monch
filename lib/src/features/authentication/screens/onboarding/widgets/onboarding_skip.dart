@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monch/src/features/authentication/controllers/onboarding/onboarding.controller.dart';
+import 'package:monch/src/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:monch/src/utils/constants/sizes.dart';
 import 'package:monch/src/utils/device/device_utility.dart';
 
