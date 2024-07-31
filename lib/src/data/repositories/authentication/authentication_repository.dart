@@ -40,13 +40,21 @@ class AuthenticationRepository extends GetxController {
 
 
   // Sign in 
+  Future<UserCredential> loginWithEmailAndPassword(String email, String password) async {
+    try {
+      return await _auth.signInWithEmailAndPassword(email: email, password: password);
+    } on FirebaseAuthException catch(e) {
+      // TODO exception handling
+      rethrow;
+    }
+  }
 
   // Register
   Future<UserCredential> registerWithEmailAndPassword(String email, String password) async {
     try {
       return await _auth.createUserWithEmailAndPassword(email: email, password: password);
     } catch (e) {
-      // TODO exeption handling
+      // TODO exception handling
       rethrow;
     }
   }
@@ -56,7 +64,7 @@ class AuthenticationRepository extends GetxController {
     try {
       await _auth.currentUser?.sendEmailVerification();
     } on FirebaseAuthException catch (e) {
-      // TODO exeption handling
+      // TODO exception handling
       rethrow;
     }
   }
