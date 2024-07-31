@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:monch/src/features/authentication/controllers/forgot_password/forgot_password_controller.dart';
+import 'package:monch/src/features/authentication/screens/login/login.dart';
 import 'package:monch/src/utils/constants/image_strings.dart';
 import 'package:monch/src/utils/constants/sizes.dart';
 import 'package:monch/src/utils/constants/texts_strings.dart';
 import 'package:monch/src/utils/helpers/helper_functions.dart';
 
 class ResetPassword extends StatelessWidget {
-  const ResetPassword({super.key});
+  const ResetPassword({super.key, required this.email});
+
+  final String email;
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -32,7 +35,15 @@ class ResetPassword extends StatelessWidget {
                 height: MonchSizes.spaceBwSections,
               ),
 
-              // Title and subtitle
+              // Email, title and subtitle
+              Text(
+                email,
+                style: Theme.of(context).textTheme.bodyMedium,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(
+                height: MonchSizes.spaceBwSections,
+              ),
               Text(
                 MonchTexts.changeYourPasswordTitle,
                 style: Theme.of(context).textTheme.headlineMedium,
@@ -54,7 +65,7 @@ class ResetPassword extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: ()  {}, // => Get.to(() => const LoginScreen()),
+                  onPressed: () => Get.offAll(() => const LoginScreen()),
                   child: const Text('Done'),
                 ),
               ),
@@ -62,7 +73,7 @@ class ResetPassword extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: TextButton(
-                  onPressed: () {}, // => Get.to(() => const LoginScreen()),
+                  onPressed: () => ForgotPasswordController.instance.resendPasswordResetEmail(email),
                   child: const Text(MonchTexts.resendEmail),
                 ),
               ),

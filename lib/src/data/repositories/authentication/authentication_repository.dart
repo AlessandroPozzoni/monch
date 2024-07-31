@@ -75,6 +75,14 @@ class AuthenticationRepository extends GetxController {
   // Reauthenticate
 
   // Forgot password
+  Future<void> sendPasswordResetEmail(String email) async {
+    try {
+      await _auth.sendPasswordResetEmail(email: email);
+    } on FirebaseAuthException catch (e) {
+      // TODO exception handling
+      rethrow;
+    }
+  }
 
   // Logout user
   Future<void> logout() async {
